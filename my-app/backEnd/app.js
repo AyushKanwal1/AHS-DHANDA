@@ -23,13 +23,14 @@ app.get("/", function (req, res) {
 
   const newUser = new userAHS({
     userName: "Sukrant",
-    password: "password",
+    password: "sukrantchandna",
     name: "suku",
   });
 
   newUser.save(() => {
     console.log("DATA ADDED");
   });
+  userAHS.findOne({userName: 'Sukrant'}, function (err, abc) {console.log(abc)});
 });
 
 const port = 3001;
